@@ -1,0 +1,2 @@
+serviceClass: br.mackenzie.copa14.client.GreetingService
+path: E9E7BF88AFA148556C868EB5C7235375.gwt.rpc

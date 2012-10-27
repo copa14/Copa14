@@ -1,0 +1,3 @@
+# Module copa14
+# RPC service class, partial path of RPC policy file
+br.mackenzie.copa14.client.GreetingService, E9E7BF88AFA148556C868EB5C7235375.gwt.rpc
