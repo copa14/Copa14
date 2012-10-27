@@ -14,9 +14,14 @@
     	<c:import url="/includes/header.jsp" />
     	<!-- header -->
         <div id="contentzone">
-
-            <div id="content">
-            	
+			<div id="breadcrumb">
+                <h1>> Videos</h1>
+                <span>Você está em: <a href="/">Home</a> > Vídeos<span>
+                </div>
+            <div id="content-interno">
+            	<div id="video">
+            	<object width="960" height="720"><param name="movie" value="http://www.youtube.com/v/rjU1KeTPack?version=3&amp;hl=pt_BR"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/rjU1KeTPack?version=3&amp;hl=pt_BR" type="application/x-shockwave-flash" width="960" height="720" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+                </div>
             </div>
         </div>
     </div>

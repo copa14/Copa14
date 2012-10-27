@@ -43,6 +43,17 @@
             	<div id="noticias">
                 </div>
                 <div id="videos">
+                	<div id="video-home">
+                    	<object width="160" height="120"><param name="movie" value="http://www.youtube.com/v/rjU1KeTPack?version=3&amp;hl=pt_BR"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/rjU1KeTPack?version=3&amp;hl=pt_BR" type="application/x-shockwave-flash" width="160" height="120" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+                    	<div><a href="Video.jsp?VideoID=">Especial Copa do Mundo 2014 - Parte I</a></div>
+                    </div>
+                    <div id="video-home">
+                    	<object width="160" height="120"><param name="movie" value="http://www.youtube.com/v/SKRHzhdT0zg?version=3&amp;hl=pt_BR"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/SKRHzhdT0zg?version=3&amp;hl=pt_BR" type="application/x-shockwave-flash" width="160" height="120" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+                    	<div><span><a href="Video.jsp?VideoID=">Especial Copa do Mundo 2014 - Parte II</a></span></div>
+                    </div>
+                    <div id="vejaMais">
+                    	<a href="FiquePorDentro.jsp">> veja mais</a>
+                    </div>
                 </div>
                 <div id="twitter_newsletter">
                 	<a class="twitter-timeline" href="https://twitter.com/Copa141" data-widget-id="262136515428237312">Tweets de @Copa141</a>

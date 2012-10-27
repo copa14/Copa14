@@ -14,9 +14,14 @@
     	<c:import url="/includes/header.jsp" />
     	<!-- header -->
         <div id="contentzone">
-
-            <div id="content">
+			<div id="breadcrumb">
+                <h1>> Seleções</h1>
+                <span>Você está em: <a href="/">Home</a> > Seleções<span>
+            </div>
+            <div id="content-interno">
+            	<div id="selecao">
             	
+                </div>
             </div>
         </div>
     </div>

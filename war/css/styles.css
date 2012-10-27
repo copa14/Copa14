@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-* {
+*, body {
 	font-family:Verdana;
 	color:#666;
 	margin:0;
@@ -12,7 +12,7 @@ ul, ul li {
 }
 body > #wrap {
 	height: auto;
-	min-height: 100%;
+	min-height: 765px;
 }
 #wrap {
 	width:100%;
@@ -70,6 +70,7 @@ body > #wrap {
 	height:419px;
 	float:left;
 	margin-left:15px;
+	padding-top:30px;
 }
 #twitter_newsletter {
 	width:279px;
@@ -85,4 +86,63 @@ body > #wrap {
 	background-color:#efc34a;
 	color:#fff;
 	line-height:30px;
+}
+
+#content-interno {
+	width:1000px;
+	margin: 15px auto;
+	padding:15px 0 45px 0;
+}
+#breadcrumb {
+	width:1000px;
+	margin:0 auto;
+}
+#breadcrumb h1 {
+	color:#efc34a;
+	font-size:24px;
+	font-weight:bold;
+	margin: 15px 0 0 0;
+	padding:0;
+}
+#breadcrumb span {
+	font-size:11px;
+	margin-left:2px;
+}
+#breadcrumb span a, #breadcrumb span a:visited{
+	color:#666;
+}
+#breadcrumb span a:hover {
+	color:#efc34a;
+}
+#video {
+	text-align: center;
+}
+
+#video-home {
+	text-align:center;
+	width: 270px;
+	margin-top: 15px;
+}
+#video-home a, #video-home a:visited{
+	color:#666;
+	font-size:12px;
+	line-height: 30px;
+}
+#video-home a:hover {
+	color:#efc34a;
+	font-size:12px;
+	line-height: 30px;
+}
+#vejaMais {
+	text-align: right;
+	padding-right: 25px;
+	padding-top: 12px;
+}
+#vejaMais a, #vejaMais a:visited {
+	color:#666;
+	font-weight:bold;
+}
+#vejaMais a:hover {
+	color:#efc34a;
+	font-weight:bold;
 }
