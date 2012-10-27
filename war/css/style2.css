@@ -84,6 +84,10 @@
 	line-height: 320px;
 	left: 110%; /*60%*/
 }
+.da-img img {
+	max-height:210px;
+	max-width:386px;
+}
 .da-slide .da-link{
 	top: 270px; /*depends on p height*/
 	border-radius: 30px;

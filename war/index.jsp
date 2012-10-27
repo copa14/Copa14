@@ -18,20 +18,20 @@
 				<div class="da-slide">
 					<h2>Seleções</h2>
 					<p>Conheça os jogadores de cada seleção.</p>
-					<a href="#" class="da-link">Saiba mais</a>
-					<div class="da-img"><img src="images/3.png" alt="image01" /></div>
+					<a href="Selecoes.jsp" class="da-link">Saiba mais</a>
+					<div class="da-img"><img src="img/teams.jpg" alt="Seleções" /></div>
 				</div>
 				<div class="da-slide">
 					<h2>Cidades-Sede</h2>
 					<p>Doze cidades das cinco regiões do Brasil receberão a Copa do Mundo em 2014.</p>
-					<a href="#" class="da-link">Saiba mais</a>
+					<a href="Cidades.jsp" class="da-link">Saiba mais</a>
 					<div class="da-img"><img src="img/estadios.png" alt="Cidades-Sede" /></div>
 				</div>
 				<div class="da-slide">
 					<h2>Tabela de Jogos</h2>
 					<p>Saiba tudo sobre as chaves, as datas, horários e locais de todos os jogos, os placares finais e a classificação de cada seleção.</p>
-					<a href="#" class="da-link">Saiba mais</a>
-					<div class="da-img"><img src="images/4.png" alt="image01" /></div>
+					<a href="Jogos.jsp" class="da-link">Saiba mais</a>
+					<div class="da-img"><img src="img/world-cup-fixture-table.gif" alt="Tabela" /></div>
 				</div>
 				<nav class="da-arrows">
 					<span class="da-arrows-prev"></span>
