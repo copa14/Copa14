@@ -57,15 +57,15 @@
             			<table class="noticiaslista">
             				<tr>
             					<td>Título:</td>
-            					<td><input type="text" name="txtTitulo" size="79" value="<%=editarnoticia.getProperty("noticiaTitulo")%>"/></td>
+            					<td><input type="text" name="txtTitulo" size="79" value="<%=editarnoticia.getProperty("noticiaTitulo").toString()%>"/></td>
             				</tr>
             				<tr>
             					<td>URL da imagem:</td>
-            					<td><input type="text" name="txtURLimg" size="79" value="<%=editarnoticia.getProperty("noticiaurlimg")%>" /></td>
+            					<td><input type="text" name="txtURLimg" size="79" value="<%=editarnoticia.getProperty("noticiaurlimg").toString()%>" /></td>
             				</tr>
             				<tr>
             					<td>Texto:</td>
-            					<td><textarea rows="20" cols="80" name="txtConteudo" value="<%=editarnoticia.getProperty("noticiaConteudo")%>"></textarea></td>
+            					<td><textarea rows="20" cols="80" name="txtConteudo" ><%=editarnoticia.getProperty("noticiaConteudo").toString()%></textarea></td>
             				</tr>
             				<tr>
             					<td colspan="2"><input type="hidden" name="txtid" value="<%=editarnoticia.getKey().getId()%>" /></td>

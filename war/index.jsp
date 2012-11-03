@@ -59,24 +59,28 @@
             
             <div id="content">
             	<div id="noticias">
-            		<br>
+            		<br><br>
                 	<% 
                 	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
                 	Query query = new Query("Noticia").addSort("noticiaData", Query.SortDirection.DESCENDING);
-                    PreparedQuery pq = datastore.prepare(query);
-                    List<Entity> noticias = pq.asList(FetchOptions.Builder.withLimit(3));
+                    List<Entity> noticias = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(3));
                     for (Entity noticia1 : noticias) {                		
-                		pageContext.setAttribute("noticia_titulo",
-                				noticia1.getProperty("noticiaTitulo"));
-                		pageContext.setAttribute("noticia_img",
-                				noticia1.getProperty("noticiaurlimg"));
+                		pageContext.setAttribute("noticia_titulo", noticia1.getProperty("noticiaTitulo"));
+                		pageContext.setAttribute("noticia_img", noticia1.getProperty("noticiaurlimg"));
+                		pageContext.setAttribute("noticia_id", noticia1.getKey().getId());
 				     %>
 				           <div id="item_noticia">
+				           		<%
+							     	if(noticia1.getProperty("noticiaurlimg") != null) {
+							     		%>
 				           		<div id="home_noticia_img">
-				           			<img class="noticiathumb" src="${fn:escapeXml(noticia_img)}"/>
+				           			<a href="Noticia.jsp?id=${fn:escapeXml(noticia_id)}">
+				           				<img class="noticiathumb" src="${fn:escapeXml(noticia_img)}"/>
+				           			</a>
 				           		</div>
+				           		<% } %>
 				           		<div id="home_noticia_tit">
-				           			${fn:escapeXml(noticia_titulo)}
+				           			<a href="Noticia.jsp?id=<%= noticia1.getKey().getId()%>">${fn:escapeXml(noticia_titulo)}</a>
 				           		</div>
 				           	</div>
 				           <%  } %>

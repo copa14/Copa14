@@ -64,8 +64,7 @@
                 <%
                 DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
                 Query query = new Query("Noticia").addSort("noticiaData", Query.SortDirection.DESCENDING);
-                PreparedQuery pq = datastore.prepare(query);
-                List<Entity> noticias = pq.asList(FetchOptions.Builder.withLimit(50)); 
+                List<Entity> noticias = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(50)); 
                 %>
                 <br>
                 <h2>Notícias cadastradas</h2>
