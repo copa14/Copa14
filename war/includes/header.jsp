@@ -17,16 +17,16 @@
 <div id="header">
         	<div id="logos">
             	<div id="logo">
-                	<a href="/"><img src="img/logo.png" alt="Logo Copa 14" border="0" /></a>
+                	<a href="/"><img src="/img/logo.png" alt="Logo Copa 14" border="0" /></a>
                 </div>
             	<div id="mascote">
-                	<img src="img/mascote.png" alt="Mascote Copa 14" />
+                	<img src="/img/mascote.png" alt="Mascote Copa 14" />
                 </div>
             </div>
         </div>
         <div id="menu">
             	<ul>
-                	<li><a href="/"><img src="img/btn-home.png" alt="home" /></a></li>
+                	<li><a href="/"><img src="/img/btn-home.png" alt="home" /></a></li>
                     <li><a href="/Selecoes.jsp">Seleções</a></li>
                     <li><a href="/Cidades.jsp">Cidades-Sede</a></li>
                     <li><a href="/Jogos.jsp">Tabela de Jogos</a></li>

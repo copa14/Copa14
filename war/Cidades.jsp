@@ -8,7 +8,7 @@
 <title>Copa 14 - Cidades-Sede</title>
 </head>
 <body>
-<div id="wrap">
+	<div id="wrap">
     	<!-- header -->
     	<c:import url="/includes/header.jsp" />
     	<!-- header -->
