@@ -34,11 +34,17 @@
 	Query query = new Query("Noticia").addSort("noticiaData", Query.SortDirection.DESCENDING);
 	PreparedQuery pq = datastore.prepare(query);
 	Entity editarnoticia = null;
+	int cont = 0;
 	for (Entity noticia1 : pq.asIterable()) {
 		if (noticia1.getKey().getId() == idnoticia) {
 			editarnoticia = noticia1;
+			cont++;
 		}
 	}
+	if (cont == 0) {
+		response.sendRedirect("CadastroNoticias.jsp");
+	}
+	Text noticiaconteudo = (Text)editarnoticia.getProperty("noticiaConteudo");
     
 %>
 <div id="wrap">
@@ -65,7 +71,7 @@
             				</tr>
             				<tr>
             					<td>Texto:</td>
-            					<td><textarea rows="20" cols="80" name="txtConteudo" ><%=editarnoticia.getProperty("noticiaConteudo").toString()%></textarea></td>
+            					<td><textarea rows="20" cols="80" name="txtConteudo" ><%=noticiaconteudo.getValue() %></textarea></td>
             				</tr>
             				<tr>
             					<td colspan="2"><input type="hidden" name="txtid" value="<%=editarnoticia.getKey().getId()%>" /></td>

@@ -68,22 +68,22 @@
                 		pageContext.setAttribute("noticia_titulo", noticia1.getProperty("noticiaTitulo"));
                 		pageContext.setAttribute("noticia_img", noticia1.getProperty("noticiaurlimg"));
                 		pageContext.setAttribute("noticia_id", noticia1.getKey().getId());
-				     %>
+				     	%>
 				           <div id="item_noticia">
-				           		<%
-							     	if(noticia1.getProperty("noticiaurlimg") != null) {
-							     		%>
-				           		<div id="home_noticia_img">
-				           			<a href="Noticia.jsp?id=${fn:escapeXml(noticia_id)}">
-				           				<img class="noticiathumb" src="${fn:escapeXml(noticia_img)}"/>
-				           			</a>
-				           		</div>
-				           		<% } %>
+				        <%
+								if(noticia1.getProperty("noticiaurlimg") != null) {
+						%>
+				           			<div id="home_noticia_img">
+				           				<a href="Noticia.jsp?id=${fn:escapeXml(noticia_id)}">
+				           					<img class="noticiathumb" src="${fn:escapeXml(noticia_img)}"/>
+				           				</a>
+				           			</div>
+				        <% 		} %>
 				           		<div id="home_noticia_tit">
 				           			<a href="Noticia.jsp?id=<%= noticia1.getKey().getId()%>">${fn:escapeXml(noticia_titulo)}</a>
 				           		</div>
 				           	</div>
-				           <%  } %>
+					<%  } %>
 				           <br>
 				        <div id="vejaMais">
                     		<a href="FiquePorDentro.jsp">> veja mais</a>
