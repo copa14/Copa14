@@ -36,6 +36,7 @@
     noticia.setProperty("noticiaTitulo", noticiaTitulo);
     noticia.setProperty("noticiaData", date);
     noticia.setProperty("noticiaConteudo", noticiaConteudo);
+    noticia.setProperty("noticiaurlimg", request.getParameter("txtURLimg").toString());
 
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     datastore.put(noticia);
@@ -66,13 +67,19 @@
                 <br>
                 <h2>Notícias cadastradas</h2>
                 <br>
-                <table>
-                	<% for (Entity noticia1 : pq.asIterable()) {
-                		String tit1= new String(noticia1.getProperty("noticiaTitulo").toString().getBytes("iso-8859-1"),"iso-8859-1");
+                <table class="noticiaslista">
+                	<% for (Entity noticia1 : pq.asIterable()) {                		
                 		pageContext.setAttribute("noticia_titulo",
-                				tit1);
+                				noticia1.getProperty("noticiaTitulo"));
+                		pageContext.setAttribute("noticia_img",
+                				noticia1.getProperty("noticiaurlimg"));
 				           %>
-				           <tr><td>${fn:escapeXml(noticia_titulo)}</td></tr>
+				           <tr>
+				           		<td>
+				           			<img class="noticiathumb" src="${fn:escapeXml(noticia_img)}"/>
+				           		</td>
+				           		<td>${fn:escapeXml(noticia_titulo)}</td>
+				           	</tr>
 				           <%
 				     
 				   } %>

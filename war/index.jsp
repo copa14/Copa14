@@ -1,6 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="com.google.appengine.api.datastore.DatastoreService" %>
+<%@ page import="com.google.appengine.api.datastore.DatastoreServiceFactory" %>
+<%@ page import="com.google.appengine.api.datastore.Entity" %>
+<%@ page import="com.google.appengine.api.datastore.Key" %>
+<%@ page import="com.google.appengine.api.datastore.KeyFactory" %>
+<%@ page import="com.google.appengine.api.users.User" %>
+<%@ page import="com.google.appengine.api.users.UserService" %>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
+<%@ page import="com.google.appengine.api.datastore.Text" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page import="com.google.appengine.api.datastore.Query" %>
+<%@ page import="com.google.appengine.api.datastore.Query.*" %>
+<%@ page import="com.google.appengine.api.datastore.PreparedQuery" %>
+<%@ page import="com.google.appengine.api.datastore.FetchOptions" %>	
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -41,6 +59,31 @@
             
             <div id="content">
             	<div id="noticias">
+            		<br><br>
+                	<% 
+                	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+                	Query query = new Query("Noticia").addSort("noticiaData", Query.SortDirection.DESCENDING);
+                    PreparedQuery pq = datastore.prepare(query);
+                    List<Entity> noticias = pq.asList(FetchOptions.Builder.withLimit(3));
+                    for (Entity noticia1 : noticias) {                		
+                		pageContext.setAttribute("noticia_titulo",
+                				noticia1.getProperty("noticiaTitulo"));
+                		pageContext.setAttribute("noticia_img",
+                				noticia1.getProperty("noticiaurlimg"));
+				     %>
+				           <div id="item_noticia">
+				           		<div id="home_noticia_img">
+				           			<img class="noticiathumb" src="${fn:escapeXml(noticia_img)}"/>
+				           		</div>
+				           		<div id="home_noticia_tit">
+				           			${fn:escapeXml(noticia_titulo)}
+				           		</div>
+				           	</div>
+				           <%  } %>
+				           <br>
+				        <div id="vejaMais">
+                    		<a href="FiquePorDentro.jsp">> veja mais</a>
+                    	</div>
                 </div>
                 <div id="videos">
                 	<div id="video-home">

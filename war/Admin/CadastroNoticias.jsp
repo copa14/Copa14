@@ -26,6 +26,10 @@
             					<td><input type="text" name="txtTitulo" /></td>
             				</tr>
             				<tr>
+            					<td>URL da imagem:</td>
+            					<td><input type="text" name="txtURLimg" /></td>
+            				</tr>
+            				<tr>
             					<td>Texto:</td>
             					<td><textarea rows="30" cols="50" name="txtConteudo"></textarea></td>
             				</tr>

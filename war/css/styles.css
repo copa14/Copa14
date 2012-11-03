@@ -146,3 +146,27 @@ body > #wrap {
 	color:#efc34a;
 	font-weight:bold;
 }
+.noticiathumb {
+	width:90px;
+}
+.noticiaslista {
+	border-collapse:initial;
+	border-spacing: 5px;
+}
+#home_noticia_img {
+	width:140px;
+	float:left;
+	padding:0 5px;
+}
+#home_noticia_img img {
+	width:140px;
+	float:left;
+}
+#home_noticia_tit {
+	float:left;
+	width:200px;
+}
+#item_noticia {
+	height:85px;
+	margin:15px 10px;
+}
