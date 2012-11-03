@@ -59,7 +59,7 @@
             
             <div id="content">
             	<div id="noticias">
-            		<br><br>
+            		<br>
                 	<% 
                 	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
                 	Query query = new Query("Noticia").addSort("noticiaData", Query.SortDirection.DESCENDING);

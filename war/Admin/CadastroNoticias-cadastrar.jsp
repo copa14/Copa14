@@ -57,34 +57,7 @@
             		<br>
             		<input type="button" onclick="javascript:history.back();" value="Voltar" />
                 </div>
-                <div>
-                <%
                 
-                Query query = new Query("Noticia").addSort("noticiaData", Query.SortDirection.DESCENDING);
-                PreparedQuery pq = datastore.prepare(query);
-                List<Entity> noticias = pq.asList(FetchOptions.Builder.withLimit(5)); 
-                %>
-                <br>
-                <h2>Notícias cadastradas</h2>
-                <br>
-                <table class="noticiaslista">
-                	<% for (Entity noticia1 : pq.asIterable()) {                		
-                		pageContext.setAttribute("noticia_titulo",
-                				noticia1.getProperty("noticiaTitulo"));
-                		pageContext.setAttribute("noticia_img",
-                				noticia1.getProperty("noticiaurlimg"));
-				           %>
-				           <tr>
-				           		<td>
-				           			<img class="noticiathumb" src="${fn:escapeXml(noticia_img)}"/>
-				           		</td>
-				           		<td>${fn:escapeXml(noticia_titulo)}</td>
-				           	</tr>
-				           <%
-				     
-				   } %>
-                </table>
-                </div>
             </div>
         </div>
     </div>
