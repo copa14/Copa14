@@ -84,7 +84,6 @@
 				           		</div>
 				           	</div>
 					<%  } %>
-				           <br>
 				        <div id="vejaMais">
                     		<a href="FiquePorDentro.jsp">> veja mais</a>
                     	</div>

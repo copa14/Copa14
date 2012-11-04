@@ -60,7 +60,7 @@
                 	Vídeo cadastrado com sucesso!
             		<br>
             		<br>
-            		<input type="button" onclick="CadastroVideos.jsp" value="Voltar" />
+            		<input type="button" onclick="window.location='CadastroVideos.jsp'" value="Voltar" />
                 </div>
             </div>
         </div>
