@@ -36,16 +36,24 @@
                 <span>Você está em: <a href="/">Home</a> > Admin > Vídeos<span>
             </div>
             <div id="content-interno">
-            	<div id="cidadesSede">
-            		<form action="CadastroVideos-cadastrar.jsp" method="post">
+            	<!-- menu admin -->
+		    	<c:import url="/includes/menuadmin.jsp" />
+		    	<!-- menu admin -->
+                <div id="conteudoadmin">
+                	<h2>Cadastro de Vídeos</h2><br>
+                	<form action="CadastroVideos-cadastrar.jsp" method="post">
             			<table class="noticiaslista">
             				<tr>
             					<td>Título:</td>
             					<td><input type="text" name="txtTitulo" size="79" /></td>
             				</tr>
             				<tr>
-            					<td>Texto:</td>
-            					<td><textarea rows="20" cols="80" name="txtConteudo"></textarea></td>
+            					<td>Video:</td>
+            					<td><textarea rows="10" cols="80" name="txtConteudo"></textarea></td>
+            				</tr>
+            				<tr>
+            					<td>Mini Vídeo:</td>
+            					<td><textarea rows="10" cols="50" name="txtConteudoMini" ></textarea></td>
             				</tr>
             				<tr>
             					<td colspan="2">&nbsp;</td>
@@ -57,7 +65,7 @@
             			</table>
             		</form>
             		<div>
-                <%
+            		<%
                 DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
                 Query query = new Query("Video").addSort("videoData", Query.SortDirection.DESCENDING);
                 List<Entity> videos = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(50)); 
@@ -98,8 +106,10 @@
 				     
 				   } %>
                 </table>
+                <br><br>
+            		</div>
                 </div>
-                </div>
+
             </div>
         </div>
     </div>

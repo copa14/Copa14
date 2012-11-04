@@ -51,13 +51,16 @@
                 <span>Você está em: <a href="/">Home</a> > Admin > Notícias<span>
             </div>
             <div id="content-interno">
-            	<div id="cidadesSede">
-            		Notícia cadastrada com sucesso!
+            	<!-- menu admin -->
+		    	<c:import url="/includes/menuadmin.jsp" />
+		    	<!-- menu admin -->
+                <div id="conteudoadmin">
+                	<h2>Cadastro de notícias</h2><br>
+                	Notícia cadastrada com sucesso!
             		<br>
             		<br>
             		<input type="button" onclick="javascript:history.back();" value="Voltar" />
                 </div>
-                
             </div>
         </div>
     </div>

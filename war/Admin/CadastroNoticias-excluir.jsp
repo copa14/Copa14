@@ -49,13 +49,16 @@
                 <span>Você está em: <a href="/">Home</a> > Admin > Notícias<span>
             </div>
             <div id="content-interno">
-            	<div id="cidadesSede">
-            		Notícia excluída com sucesso!
+            	<!-- menu admin -->
+		    	<c:import url="/includes/menuadmin.jsp" />
+		    	<!-- menu admin -->
+                <div id="conteudoadmin">
+                	<h2>Exclusão de notícia</h2>
+                	Notícia excluída com sucesso!
             		<br>
             		<br>
             		<input type="button" onclick="window.location='CadastroNoticias.jsp'" value=" Voltar " />
                 </div>
-                
             </div>
         </div>
     </div>

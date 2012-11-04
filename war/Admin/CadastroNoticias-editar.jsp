@@ -57,8 +57,11 @@
                 <span>Você está em: <a href="/">Home</a> > Admin > Notícias<span>
             </div>
             <div id="content-interno">
-            	<div id="cidadesSede">
-            		<h2>Editar notícia</h2>
+            	<!-- menu admin -->
+		    	<c:import url="/includes/menuadmin.jsp" />
+		    	<!-- menu admin -->
+                <div id="conteudoadmin">
+                	<h2>Editar notícia</h2><br>
             		<form action="CadastroNoticias-editar-sucesso.jsp" method="post">
             			<table class="noticiaslista">
             				<tr>
@@ -84,8 +87,8 @@
             		</form>
             		<br>
             		<input type="button" onclick="window.location='CadastroNoticias.jsp'" value="Voltar" />
-                </div>
-                
+            		<br><br>
+                </div>                
             </div>
         </div>
     </div>

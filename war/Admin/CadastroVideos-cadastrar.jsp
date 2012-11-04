@@ -29,13 +29,15 @@
 <body>
 <%
 	String videoTitulo = request.getParameter("txtTitulo").toString();
-	Key videoKey = KeyFactory.createKey("Noticia", videoTitulo);
+	Key videoKey = KeyFactory.createKey("Video", videoTitulo);
 	Text videoConteudo = new Text(request.getParameter("txtConteudo").toString());
+	Text videoConteudoMini = new Text(request.getParameter("txtConteudoMini").toString());
     Date date = new Date();
     Entity video = new Entity("Video", videoKey);
     video.setProperty("videoTitulo", videoTitulo);
     video.setProperty("videoData", date);
     video.setProperty("videoConteudo", videoConteudo);
+    video.setProperty("videoConteudoMini", videoConteudoMini);
 
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     datastore.put(video);
@@ -50,13 +52,16 @@
                 <span>Você está em: <a href="/">Home</a> > Admin > Vídeos<span>
             </div>
             <div id="content-interno">
-            	<div id="cidadesSede">
-            		Vídeo cadastrado com sucesso!
+            	<!-- menu admin -->
+		    	<c:import url="/includes/menuadmin.jsp" />
+		    	<!-- menu admin -->
+                <div id="conteudoadmin">
+                	<h2>Cadastro de vídeo</h2><br>
+                	Vídeo cadastrado com sucesso!
             		<br>
             		<br>
             		<input type="button" onclick="CadastroVideos.jsp" value="Voltar" />
                 </div>
-                
             </div>
         </div>
     </div>

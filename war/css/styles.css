@@ -170,3 +170,18 @@ body > #wrap {
 	height:85px;
 	margin:15px 10px;
 }
+
+#menuadmin {
+	float:left;
+	width:220px;
+}
+#menuadmin ul li{
+	list-style: square;
+	padding:7px 0;
+	margin: 0 0 0 20px;
+}
+#conteudoadmin {
+	margin-left:20px;
+	float:left;
+	width:750px;
+}

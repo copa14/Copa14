@@ -36,8 +36,12 @@
                 <span>Você está em: <a href="/">Home</a> > Admin > Notícias<span>
             </div>
             <div id="content-interno">
-            	<div id="cidadesSede">
-            		<form action="CadastroNoticias-cadastrar.jsp" method="post">
+            	<!-- menu admin -->
+		    	<c:import url="/includes/menuadmin.jsp" />
+		    	<!-- menu admin -->
+                <div id="conteudoadmin">
+                	<h2>Cadastro de Notícias</h2><br>
+                	<form action="CadastroNoticias-cadastrar.jsp" method="post">
             			<table class="noticiaslista">
             				<tr>
             					<td>Título:</td>
@@ -103,6 +107,7 @@
 				     
 				   } %>
                 </table>
+                <br><br>
                 </div>
                 </div>
             </div>
